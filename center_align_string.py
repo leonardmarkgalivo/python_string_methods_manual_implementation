@@ -1,5 +1,7 @@
-# Pseudocode for centering a string
-# 1. Define a function that takes a string and a width as input.
-# 2. Calculate the number of spaces needed on each side.
-# 3. Add spaces equally to both sides.
-# 4. Return the new string.
+# Initialize function for centering a string
+def center_align_string(s, width):
+    pass  # Placeholder for logic
+
+# Example usage
+test_string = "Hello"
+print(center_align_string(test_string, 11))  # Expected output: "   Hello   "

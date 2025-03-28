@@ -1,7 +1,7 @@
-# Pseudocode for removing leading spaces
-# 1. Define a function that takes a string as input.
-# 2. Initialize an index variable to 0.
-# 3. Loop through the string:
-#    - If the current character is a space, increment the index.
-#    - If a non-space character is found, break the loop.
-# 4. Return the substring starting from the first non-space character.
+# Initialize function for removing leading spaces
+def remove_leading_spaces(s):
+    pass  # Placeholder for logic
+
+# Example usage
+test_string = "   Hello, World!"
+print(remove_leading_spaces(test_string))  # Expected output: "Hello, World!"
