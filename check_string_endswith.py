@@ -1,8 +1,9 @@
 # Initialize function to check if a string ends with a given suffix
 def check_string_endswith(s, suffix):
-    pass  # Placeholder for logic
+    return s[-len(suffix):] == suffix if len(suffix) <= len(s) else False
 
-# Example usage
-test_string = "Hello, World!"
-suffix = "World!"
-print(check_string_endswith(test_string, suffix))  # Expected output: True
+
+s = "hello.txt"
+suffix = ".txt"
+print("Does", repr(s), "end with", repr(suffix), "?", check_string_endswith(s, suffix))
+

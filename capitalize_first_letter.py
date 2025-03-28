@@ -1,7 +1,12 @@
 # Initialize function to capitalize the first letter
 def capitalize_first_letter(s):
-    pass  # Placeholder for logic
+    if not s:
+        return s
+    first_char = s[0].upper() if "a" <= s[0] <= "z" else s[0]
+    rest = "".join(chr(ord(c) + 32) if "A" <= c <= "Z" else c for c in s[1:])
+    return first_char + rest
 
-# Example usage
-test_string = "hello world!"
-print(capitalize_first_letter(test_string))  # Expected output: "Hello world!"
+
+s = "hELLO world"
+print("Original:", repr(s))
+print("After capitalizing first letter:", repr(capitalize_first_letter(s)))

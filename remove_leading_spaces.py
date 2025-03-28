@@ -1,7 +1,11 @@
 # Initialize function for removing leading spaces
 def remove_leading_spaces(s):
-    pass  # Placeholder for logic
+    i = 0
+    while i < len(s) and s[i] == " ":
+        i += 1
+    return s[i:]
 
-# Example usage
-test_string = "   Hello, World!"
-print(remove_leading_spaces(test_string))  # Expected output: "Hello, World!"
+
+s = "   Hello, World!"
+print("Original:", repr(s))
+print("After removing leading spaces:", repr(remove_leading_spaces(s)))
