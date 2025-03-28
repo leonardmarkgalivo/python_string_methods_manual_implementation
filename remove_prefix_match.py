@@ -1,10 +1,10 @@
-# Initialize function for removing prefix if it matches
-def remove_prefix_match(s, prefix):
-    if s.startswith(prefix):
-        return s[len(prefix):]
-    return s
+# Get input
+text = input("Enter a string: ")
+prefix = input("Enter prefix to remove: ")
 
-s = "unhappy"
-prefix = "un"
-print("Original:", repr(s))
-print("After removing prefix:", repr(remove_prefix_match(s, prefix)))
+# Remove prefix if it matches
+if text.startswith(prefix):
+    text = text[len(prefix):]
+
+# Print result
+print("Result:", text)

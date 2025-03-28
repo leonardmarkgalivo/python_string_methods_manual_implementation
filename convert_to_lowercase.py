@@ -1,14 +1,13 @@
-# Initialize function for converting string to lowercase
-def convert_to_lowercase(s):
-    result = ""
-    for char in s:
-        if "A" <= char <= "Z":
-            result += chr(ord(char) + 32)
-        else:
-            result += char
-    return result
+# Get input
+text = input("Enter a string: ")
 
+# Convert to lowercase
+lower_text = ""
+for char in text:
+    if 'A' <= char <= 'Z':
+        lower_text += chr(ord(char) + 32)
+    else:
+        lower_text += char
 
-s = "HeLLo WORLD"
-print("Original:", repr(s))
-print("After converting to lowercase:", repr(convert_to_lowercase(s)))
+# Print result
+print("Lowercase:", lower_text)

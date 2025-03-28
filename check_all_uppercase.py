@@ -1,11 +1,12 @@
-# Initialize function to check if all characters are uppercase
-def check_all_uppercase(s):
-    for char in s:
-        if "a" <= char <= "z":
-            return False
-    return True if s else False
+# Get input
+text = input("Enter a string: ")
 
-s1 = "HELLO"
-s2 = "Hello"
-print("Is", repr(s1), "all uppercase?", check_all_uppercase(s1))
-print("Is", repr(s2), "all uppercase?", check_all_uppercase(s2))
+# Check if all letters are uppercase
+is_upper = True
+for char in text:
+    if 'a' <= char <= 'z':
+        is_upper = False
+        break
+
+# Print result
+print("Is all uppercase?", is_upper)

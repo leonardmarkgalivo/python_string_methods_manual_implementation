@@ -1,11 +1,10 @@
-# Initialize function for removing leading spaces
-def remove_leading_spaces(s):
-    i = 0
-    while i < len(s) and s[i] == " ":
-        i += 1
-    return s[i:]
+# Get input
+text = input("Enter a string: ")
 
+# Find first non-space character
+i = 0
+while i < len(text) and text[i] == ' ':
+    i += 1
 
-s = "   Hello, World!"
-print("Original:", repr(s))
-print("After removing leading spaces:", repr(remove_leading_spaces(s)))
+# Print trimmed string
+print("Trimmed:", text[i:])

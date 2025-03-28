@@ -1,17 +1,15 @@
-# Initialize function to swap case of each character
-def swap_case_characters(s):
-    result = ""
-    for char in s:
-        if "A" <= char <= "Z":
-            result += chr(ord(char) + 32)
-        elif "a" <= char <= "z":
-            result += chr(ord(char) - 32)
-        else:
-            result += char
-    return result
+# Get input
+text = input("Enter a string: ")
 
+# Swap case
+swapped = ""
+for char in text:
+    if 'a' <= char <= 'z':
+        swapped += chr(ord(char) - 32)
+    elif 'A' <= char <= 'Z':
+        swapped += chr(ord(char) + 32)
+    else:
+        swapped += char
 
-s = "HeLLo WoRLd!"
-print("Original:", repr(s))
-print("After swapping case:", repr(swap_case_characters(s)))
-
+# Print result
+print("Swapped case:", swapped)
