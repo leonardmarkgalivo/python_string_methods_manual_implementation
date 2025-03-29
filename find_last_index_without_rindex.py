@@ -1,7 +1,8 @@
 # Get a string and a substring to find
 def find_last_index_without_rindex(text, substring):  
     # Find the last occurrence of the substring in the string  
-    pass  
+    for i in range(len(text) - len(substring), -1, -1):
+        if text[i:i + len(substring)] == substring:
+            return i
+    return -1
 
-# Iterate through the string from the end to find the last occurrence
-# Return the index if found, otherwise return -1
