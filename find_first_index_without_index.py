@@ -1,7 +1,6 @@
-# Get a string and a substring to find
-def find_first_index_without_index(text, substring):  
-    # Find the first occurrence of the substring in the string  
-    for i in range(len(text) - len(substring) + 1):
-        if text[i:i + len(substring)] == substring:
-            return i
-    return -1
+# Get input text and substring, then find first index
+text = input("Enter a string: ")
+substring = input("Enter substring to find: ")
+index = next((i for i in range(len(text) - len(substring) + 1) if text[i:i + len(substring)] == substring), -1)
+print("Result:", index)
+
